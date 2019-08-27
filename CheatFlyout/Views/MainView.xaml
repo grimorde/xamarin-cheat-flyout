@@ -4,22 +4,25 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Visual="Material"
              x:Class="CheatFlyout.Views.MainView">
+
     <ContentPage.Content>
         <StackLayout>
             <Grid Margin="10">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="200" />
-                    <RowDefinition Height="200" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Button Text="Button 1" Grid.Row="0" Grid.Column="0" />
-                <Button Text="Button 2" Grid.Row="0" Grid.Column="1" />
-                <Button Text="Button 3" Grid.Row="1" Grid.Column="0" />
-                <Button Text="Button 4" Grid.Row="1" Grid.Column="1" />
+                
+                <Button ImageSource="img1.png" Text="Button 1" Grid.Row="0" Grid.Column="0" />
+                <Button ImageSource="img2.png" Text="Button 2" Grid.Row="0" Grid.Column="1" />
+                <Button ImageSource="img3.png" Text="Button 3" Grid.Row="1" Grid.Column="0" />
+                <Button ImageSource="img4.png" Text="Button 4" Grid.Row="1" Grid.Column="1" />
             </Grid>
         </StackLayout>
     </ContentPage.Content>

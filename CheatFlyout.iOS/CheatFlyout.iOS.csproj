@@ -120,8 +120,11 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.709244" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material">
+      <Version>4.2.0.709249</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -129,5 +132,17 @@
       <Project>{EABECEB6-7A67-4D49-995C-2D817290C032}</Project>
       <Name>CheatFlyout</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\img1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\img2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\img3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\img4.png" />
   </ItemGroup>
 </Project>

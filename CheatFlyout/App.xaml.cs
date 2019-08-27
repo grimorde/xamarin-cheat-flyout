@@ -1,6 +1,5 @@
-﻿using System;
+﻿using CheatFlyout.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace CheatFlyout
 {
@@ -10,7 +9,7 @@ namespace CheatFlyout
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MainView();
         }
 
         protected override void OnStart()
