@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using CheatFlyout.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +10,8 @@ namespace CheatFlyout.Views
         public MainView()
         {
             InitializeComponent();
+            var viewModel = new MainViewModel();
+            this.BindingContext = viewModel;
         }
     }
 }

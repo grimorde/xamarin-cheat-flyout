@@ -1,4 +1,7 @@
-﻿using CheatFlyout.Views;
+﻿using System.Threading.Tasks;
+using System.Windows.Input;
+using Acr.UserDialogs;
+using CheatFlyout.Views;
 using Xamarin.Forms;
 
 namespace CheatFlyout
