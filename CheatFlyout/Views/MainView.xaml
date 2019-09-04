@@ -5,33 +5,54 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Visual="Material"
-             x:Class="CheatFlyout.Views.MainView">
+             x:Class="CheatFlyout.Views.MainView"
+             NavigationPage.HasNavigationBar="True">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem>
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS, Android" Value="hamburger" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <StackLayout x:Name="MainArea" HorizontalOptions="CenterAndExpand">
-            <Grid Margin="10" ColumnSpacing="5" RowSpacing="5" VerticalOptions="StartAndExpand">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                
-                <Button Text="Button 1" Grid.Row="0" Grid.Column="0" WidthRequest="150" HeightRequest="150" 
-                        Command="{Binding ButtonClickCommand}" CommandParameter="1" />
-                <Button Text="Button 2" Grid.Row="0" Grid.Column="1" WidthRequest="150" HeightRequest="150" 
-                        Command="{Binding ButtonClickCommand}" CommandParameter="2" />
-                <Button Text="Button 3" Grid.Row="1" Grid.Column="0" WidthRequest="150" HeightRequest="150" 
-                        Command="{Binding ButtonClickCommand}" CommandParameter="3" />
-                <Button Text="Button 4" Grid.Row="1" Grid.Column="1" WidthRequest="150" HeightRequest="150" 
-                        Command="{Binding ButtonClickCommand}" CommandParameter="4" />
-            </Grid>
+        <Grid x:Name="LayoutGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" Grid.Column="1" x:Name="MenuArea" BackgroundColor="#2f5a87"/>
+            <StackLayout Grid.Row="0" Grid.Column="0" x:Name="MainArea" HorizontalOptions="CenterAndExpand">
+                <Grid Margin="10" ColumnSpacing="5" RowSpacing="5" VerticalOptions="StartAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
 
-            <StackLayout VerticalOptions="End" Margin="10">
-                <Button Text="Sign Out" Command="{Binding ButtonClickCommand}" CommandParameter="Sign Out"></Button>
+                    <Button Text="Button 1" Grid.Row="0" Grid.Column="0" WidthRequest="150" HeightRequest="150" 
+                        Command="{Binding ButtonClickCommand}" CommandParameter="1" />
+                    <Button Text="Button 2" Grid.Row="0" Grid.Column="1" WidthRequest="150" HeightRequest="150" 
+                        Command="{Binding ButtonClickCommand}" CommandParameter="2" />
+                    <Button Text="Button 3" Grid.Row="1" Grid.Column="0" WidthRequest="150" HeightRequest="150" 
+                        Command="{Binding ButtonClickCommand}" CommandParameter="3" />
+                    <Button Text="Button 4" Grid.Row="1" Grid.Column="1" WidthRequest="150" HeightRequest="150" 
+                        Command="{Binding ButtonClickCommand}" CommandParameter="4" />
+                </Grid>
+
+                <StackLayout VerticalOptions="End" Margin="10">
+                    <Button Text="Sign Out" Command="{Binding ButtonClickCommand}" CommandParameter="Sign Out"></Button>
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

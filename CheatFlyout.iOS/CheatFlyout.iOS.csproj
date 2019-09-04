@@ -134,15 +134,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\img1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\img2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\img3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\img4.png" />
+    <BundleResource Include="Resources\hamburger.png" />
   </ItemGroup>
 </Project>
