@@ -12,7 +12,7 @@ namespace CheatFlyout
         {
             InitializeComponent();
 
-            MainPage = new MainView();
+            MainPage = new NavigationPage(new MainView());
         }
 
         protected override void OnStart()

@@ -5,9 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Visual="Material"
-             x:Class="CheatFlyout.Views.MainView"
-             NavigationPage.HasNavigationBar="True">
-
+             Title="Cheat Flyout"
+             x:Class="CheatFlyout.Views.MainView">
+    
     <ContentPage.ToolbarItems>
         <ToolbarItem>
             <ToolbarItem.Icon>
