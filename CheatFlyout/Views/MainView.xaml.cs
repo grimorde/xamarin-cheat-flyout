@@ -56,7 +56,7 @@ namespace CheatFlyout.Views
         protected override void OnAppearing()
         {
             _isExpanded = false;
-            AnimateOut();
+            AnimateIn();
         }
     }
 }
