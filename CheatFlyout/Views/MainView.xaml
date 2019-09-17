@@ -9,15 +9,24 @@
     Visual="Material"
     mc:Ignorable="d">
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Clicked="ShowMenu_Clicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS, Android" Value="hamburger" />
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
-    </ContentPage.ToolbarItems>
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Dashboard" FontSize="18" FontAttributes="Bold" TextColor="White" 
+                   HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center">
+                <Label.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="30,0,0,0"/>
+                        <On Platform="Android" Value="0"/>
+                    </OnPlatform>
+                </Label.Margin>
+            </Label>
+            <Image Source="hamburger.png" HorizontalOptions="End" WidthRequest="50">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ShowMenu_Clicked" />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+    </NavigationPage.TitleView>
 
     <ContentPage.Content>
         <Grid x:Name="LayoutGrid">
